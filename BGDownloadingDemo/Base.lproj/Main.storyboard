@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i1b-UI-l7Q">
+                                <rect key="frame" x="67" y="72" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="gm5-EL-1BY"/>
+                                    <constraint firstAttribute="width" constant="240" id="oNF-Ep-ktf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qI-Xk-z42">
+                                <rect key="frame" x="153" y="331" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="L4s-3c-8K3"/>
+                                    <constraint firstAttribute="width" constant="69" id="hId-jM-yeu"/>
+                                </constraints>
+                                <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="downloadTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R5Z-IN-3hs"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bgr-XZ-x1c">
+                                <rect key="frame" x="169" y="380" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="RUV-Sq-on2"/>
+                                    <constraint firstAttribute="width" constant="37" id="eza-C8-BWL"/>
+                                </constraints>
+                                <color key="color" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i1b-UI-l7Q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="9HA-XX-T4k"/>
+                            <constraint firstItem="0qI-Xk-z42" firstAttribute="top" secondItem="i1b-UI-l7Q" secondAttribute="bottom" constant="19" id="dFe-cH-joB"/>
+                            <constraint firstItem="bgr-XZ-x1c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="go0-2p-0kW"/>
+                            <constraint firstItem="bgr-XZ-x1c" firstAttribute="top" secondItem="0qI-Xk-z42" secondAttribute="bottom" constant="19" id="izT-am-FAR"/>
+                            <constraint firstItem="i1b-UI-l7Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oJB-Sn-KtP"/>
+                            <constraint firstItem="0qI-Xk-z42" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ysv-yT-dXs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="downloadIndicator" destination="bgr-XZ-x1c" id="zQZ-hK-bkA"/>
+                        <outlet property="imageView" destination="i1b-UI-l7Q" id="8an-9b-2B5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
